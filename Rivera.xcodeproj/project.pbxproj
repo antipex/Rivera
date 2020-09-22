@@ -15,6 +15,11 @@
 		27C9C4A9251A62B600A287D3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27C9C4A7251A62B600A287D3 /* LaunchScreen.storyboard */; };
 		27C9C4B4251A62B600A287D3 /* RiveraTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C9C4B3251A62B600A287D3 /* RiveraTests.swift */; };
 		27C9C4BF251A62B600A287D3 /* RiveraUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C9C4BE251A62B600A287D3 /* RiveraUITests.swift */; };
+		27C9C4D0251A63D300A287D3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C9C4CF251A63D300A287D3 /* Constants.swift */; };
+		27C9C4D6251A65B600A287D3 /* RemoteImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C9C4D5251A65B600A287D3 /* RemoteImage.swift */; };
+		27C9C4DE251A672700A287D3 /* ImageApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C9C4DD251A672700A287D3 /* ImageApi.swift */; };
+		27C9C4E7251A687A00A287D3 /* ImageGridViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C9C4E6251A687A00A287D3 /* ImageGridViewModel.swift */; };
+		27C9C4F4251A6A5000A287D3 /* ImageGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C9C4F3251A6A5000A287D3 /* ImageGridView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +54,12 @@
 		27C9C4BA251A62B600A287D3 /* RiveraUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RiveraUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		27C9C4BE251A62B600A287D3 /* RiveraUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RiveraUITests.swift; sourceTree = "<group>"; };
 		27C9C4C0251A62B600A287D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		27C9C4CF251A63D300A287D3 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		27C9C4D5251A65B600A287D3 /* RemoteImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteImage.swift; sourceTree = "<group>"; };
+		27C9C4DD251A672700A287D3 /* ImageApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageApi.swift; sourceTree = "<group>"; };
+		27C9C4E6251A687A00A287D3 /* ImageGridViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageGridViewModel.swift; sourceTree = "<group>"; };
+		27C9C4F3251A6A5000A287D3 /* ImageGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageGridView.swift; sourceTree = "<group>"; };
+		27C9C4F8251A7A1D00A287D3 /* Rivera.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Rivera.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +110,9 @@
 		27C9C49B251A62B500A287D3 /* Rivera */ = {
 			isa = PBXGroup;
 			children = (
+				27C9C4F8251A7A1D00A287D3 /* Rivera.entitlements */,
+				27C9C4E5251A686C00A287D3 /* Image Grid */,
+				27C9C4D4251A65A600A287D3 /* Models */,
 				27C9C49C251A62B500A287D3 /* AppDelegate.swift */,
 				27C9C49E251A62B500A287D3 /* SceneDelegate.swift */,
 				27C9C4A0251A62B500A287D3 /* ContentView.swift */,
@@ -106,6 +120,8 @@
 				27C9C4A7251A62B600A287D3 /* LaunchScreen.storyboard */,
 				27C9C4AA251A62B600A287D3 /* Info.plist */,
 				27C9C4A4251A62B600A287D3 /* Preview Content */,
+				27C9C4CF251A63D300A287D3 /* Constants.swift */,
+				27C9C4DD251A672700A287D3 /* ImageApi.swift */,
 			);
 			path = Rivera;
 			sourceTree = "<group>";
@@ -134,6 +150,23 @@
 				27C9C4C0251A62B600A287D3 /* Info.plist */,
 			);
 			path = RiveraUITests;
+			sourceTree = "<group>";
+		};
+		27C9C4D4251A65A600A287D3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				27C9C4D5251A65B600A287D3 /* RemoteImage.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		27C9C4E5251A686C00A287D3 /* Image Grid */ = {
+			isa = PBXGroup;
+			children = (
+				27C9C4E6251A687A00A287D3 /* ImageGridViewModel.swift */,
+				27C9C4F3251A6A5000A287D3 /* ImageGridView.swift */,
+			);
+			path = "Image Grid";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -268,7 +301,12 @@
 			files = (
 				27C9C49D251A62B500A287D3 /* AppDelegate.swift in Sources */,
 				27C9C49F251A62B500A287D3 /* SceneDelegate.swift in Sources */,
+				27C9C4F4251A6A5000A287D3 /* ImageGridView.swift in Sources */,
+				27C9C4DE251A672700A287D3 /* ImageApi.swift in Sources */,
 				27C9C4A1251A62B500A287D3 /* ContentView.swift in Sources */,
+				27C9C4D0251A63D300A287D3 /* Constants.swift in Sources */,
+				27C9C4D6251A65B600A287D3 /* RemoteImage.swift in Sources */,
+				27C9C4E7251A687A00A287D3 /* ImageGridViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -436,6 +474,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Rivera/Rivera.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Rivera/Preview Content\"";
 				DEVELOPMENT_TEAM = U2HPM8JL26;
@@ -447,6 +486,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.kylerohr.Rivera;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -457,6 +497,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Rivera/Rivera.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Rivera/Preview Content\"";
 				DEVELOPMENT_TEAM = U2HPM8JL26;
@@ -468,6 +509,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.kylerohr.Rivera;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
