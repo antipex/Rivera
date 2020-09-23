@@ -5,12 +5,13 @@
 //  Created by Kyle Rohr on 22/9/20.
 //
 
-import Foundation
+import UIKit
 import Combine
 
 class ImageGridViewModel: ObservableObject {
 
     @Published var images = [RemoteImage]()
+    @Published var downloadProgress: CGFloat = 0
 
     private var imageApi: ImageApiImpl
     private var cancellables = Set<AnyCancellable>()
@@ -18,11 +19,11 @@ class ImageGridViewModel: ObservableObject {
     init(imageApi: ImageApiImpl) {
         self.imageApi = imageApi
 
-        self.reloadImages()
+        self.reloadRemoteImages()
     }
 
-    func reloadImages() {
-        imageApi.getImages()
+    func reloadRemoteImages() {
+        imageApi.getRemoteImages()
             .receive(on: DispatchQueue.main)
             .sink { completion in
                 switch completion {
@@ -44,7 +45,6 @@ class ImageGridViewModel: ObservableObject {
                 self.images = value
             }
             .store(in: &cancellables)
-
     }
 
 }

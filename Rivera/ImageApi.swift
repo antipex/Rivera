@@ -18,13 +18,13 @@ enum ImageApiError: Error {
 
 protocol ImageApiImpl {
 
-    func getImages() -> AnyPublisher<[RemoteImage], ImageApiError>
+    func getRemoteImages() -> AnyPublisher<[RemoteImage], ImageApiError>
 
 }
 
 class ImageApi: ImageApiImpl {
 
-    func getImages() -> AnyPublisher<[RemoteImage], ImageApiError> {
+    func getRemoteImages() -> AnyPublisher<[RemoteImage], ImageApiError> {
         guard var components = URLComponents(url: URL(string: Rivera.Api.url)!, resolvingAgainstBaseURL: false) else {
             return Empty(completeImmediately: true).eraseToAnyPublisher()
         }

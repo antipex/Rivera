@@ -48,4 +48,8 @@ struct RemoteImage: Codable, Identifiable {
 //        case tags
     }
 
+    var url: URL? {
+        return URL(string: image, relativeTo: URL(string: Rivera.Api.baseImageUrl)!)
+    }
+
 }
